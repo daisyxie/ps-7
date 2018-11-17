@@ -10,7 +10,7 @@ export class Trips extends Component {
         }
     }
     componentDidMount() {
-        d3.csv("test.csv").then((d) => {
+        d3.csv("trips.csv").then((d) => {
             this.setState({ data: d });
      });
     }
