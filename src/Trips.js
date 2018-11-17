@@ -10,14 +10,12 @@ export class Trips extends Component {
         }
     }
     componentDidMount() {
-        d3.csv('data/trips.csv', (err, data) => {
-            this.setState({
-                data: data
-            })
-        })
+        d3.csv("test.csv").then((d) => {
+            this.setState({ data: d });
+     });
     }
     render() {
-        console.log(this.state.data)
+        //console.log(this.state.data)
         return <div className="container">Trips
                  { this.state.data.map((d, i) => {
                        return <Col sm="6" key={ "trip" + i }>
